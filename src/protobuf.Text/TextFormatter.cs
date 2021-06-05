@@ -424,10 +424,8 @@ namespace Protobuf.Text
             }
             else if (value is long || value is ulong)
             {
-                writer.Write('"');
                 IFormattable formattable = (IFormattable) value;
                 writer.Write(formattable.ToString("d", CultureInfo.InvariantCulture));
-                writer.Write('"');
             }
             else if (value is System.Enum)
             {
